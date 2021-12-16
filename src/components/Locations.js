@@ -2,13 +2,20 @@ import { Component } from "react";
 import "../App.css";
 
 class Locations extends Component{
+    constructor(){
+        super();
+
+
+        this.state={
+
+        }
+    }
   
   render(){
     return (
-      <div className="Locations">
-        <main>
-          <h1>Hello, locations!</h1>
-        </main>
+      <div className="locations">
+          <h1>List of Locations</h1>
+          <button>Show locations</button>
       </div>
     );
   }

@@ -2,6 +2,15 @@ import { Component } from "react";
 import "../App.css";
 
 class People extends Component{
+
+    constructor(){
+        super();
+
+        
+        this.state={
+
+        }
+    }
   
   render(){
     return (
