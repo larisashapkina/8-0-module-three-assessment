@@ -45,7 +45,7 @@ class Movies extends Component{
       <div className="movies">
           <h1>Select a Movie</h1>
           <select onChange={this.handleDropDownChange}>
-              <option>--select a movie--</option>
+              <option></option>
               {dropDownOption}
           </select>
             <h1>Title: {currentMovieObject ? currentMovieObject.title : null}</h1>
