@@ -10,7 +10,8 @@ class Locations extends Component{
             display:true,
             locationName:"",
             locationClimate:"",
-            locationTerrain:""
+            locationTerrain:"",
+            buttonText: "Show Locations"
         }
     }
   
@@ -31,12 +32,13 @@ class Locations extends Component{
 handleClick=(e)=>{
     e.preventDefault();
     let name = this.state.locations.map((location)=>location.name).join(", ");
-    let climate = this.state.locations.map((location)=>location.climate);
-    let terrain = this.state.locations.map((location)=>location.terrain);
+    let climate = this.state.locations.map((location)=>location.climate).join(", ");
+    let terrain = this.state.locations.map((location)=>location.terrain).join(", ");
     this.setState({
         locationName: name,
         locationClimate: climate,
-        locationTerrain: terrain
+        locationTerrain: terrain,
+        buttonText: "Hide Locations"
     })
 }
 
@@ -56,7 +58,7 @@ handleClick=(e)=>{
     return (
       <div className="locations">
           <h1>List of Locations</h1>
-            <button onClick={this.handleClick}>Show Locations</button>
+            <button onClick={this.handleClick}>{this.state.buttonText}</button>
             <ul>
                 <li>
                      <strong>Name:</strong> {this.state.locationName}
