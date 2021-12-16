@@ -33,8 +33,8 @@ class Movies extends Component{
     }
 
   render(){
-    let dropDownOption = this.state.movies.map((movie)=>{
-        return <option value={movie.title}>{movie.title}</option>
+    let dropDownOption = this.state.movies.map((movie, index)=>{
+        return <option key= {index}value={movie.title}>{movie.title}</option>
     })
 
     let currentMovieObject = this.state.movies.find((movie)=>{

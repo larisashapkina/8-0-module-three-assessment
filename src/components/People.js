@@ -8,7 +8,6 @@ class People extends Component{
         this.state={
             people:[],
             searchInput:"",
-            searchedPeople:""
         }
     }
   
@@ -18,7 +17,6 @@ class People extends Component{
         .then ((data)=>{
             this.setState({
                 people: data,
-                
             })
         })
     }
@@ -28,23 +26,35 @@ class People extends Component{
     }
 
     handleInput=(e)=>{
+        e.preventDefault();
         this.setState({
             searchInput: e.target.value
         })
     }
 
-    handleSearch=(e)=>{
-        e.preventDefault();
-    
-    }
+    // handleSearch=(e)=>{
+    //     e.preventDefault(); 
+    // }
 
   render(){
+      let peopleList = this.state.people.map((person)=>{
+          if(person.name === this.state.searchInput){
+            return(
+                <div>
+                    <div>Name:{person.name}</div>
+                    <div>Age:{person.age}</div>
+                    <div>Gender:{person.gender}</div>
+                </div>
+            )
+          }
+      })
     return (
       <div className="people">
           <h1>Search for a Person</h1>
-          <form onSubmit={this.handleSearch}>
+          <form onSubmit={this.fetchPeople}>
               <input type="text" placeholder="Find Your Person" onChange={this.handleInput} value={this.state.searchInput}></input>
               <button>Submit</button>
+              <div>{peopleList}</div>
           </form>
       </div>
     );

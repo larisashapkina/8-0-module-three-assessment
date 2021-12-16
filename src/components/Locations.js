@@ -38,23 +38,13 @@ handleClick=(e)=>{
         locationName: name,
         locationClimate: climate,
         locationTerrain: terrain,
-        buttonText: "Hide Locations"
+        buttonText: "Hide Locations",
+
     })
 }
 
 
   render(){
-    //   let locationsToDisplay = this.state.locations.map((location)=>{
-    //       return (
-    //         <div>
-    //         <li>Name: {location.name} </li>
-    //         <li>Climate:{location.climate} </li>
-    //         <li>Terrain:{location.terrain} </li>
-    //       </div>
-       
-    //       )
-    //   })
-    //   console.log(locationsToDisplay);
     return (
       <div className="locations">
           <h1>List of Locations</h1>
@@ -70,21 +60,39 @@ handleClick=(e)=>{
                     <strong>Terrain:</strong>{this.state.locationTerrain}
                 </li>  
             </ul>
-      </div>
+      </div> 
     );
   }
 }
 
 export default Locations;
 
-  {/* {locationsToDisplay} */}
 
-           {/* { this.state.display &&
-                <button type="text" 
-                onClick={locationsToDisplay}
-                checked={this.state.display}>Show locations</button>
-            }
-            
-            { !this.state.display &&
-                <div>Thing is hidden</div>
-            } */}
+
+// render(){
+//  let locationsToDisplay = this.state.locations.map((location)=>{
+//    return (
+//     <div>
+//         <li>Name: {location.name} </li>
+//         <li>Climate:{location.climate} </li>
+//         <li>Terrain:{location.terrain} </li>
+//      </div>
+       
+//      )
+// })
+
+
+// return (
+//     <div className="locations">
+//         <h1>List of Locations</h1>
+     
+//           <button onClick={this.handleClick}>{this.state.buttonText}</button>
+//           <ul>
+//                 {locationsToDisplay}
+//         </ul>
+//     </div> 
+//   );
+// }
+// }
+
+// export default Locations;

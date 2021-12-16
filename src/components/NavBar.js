@@ -10,9 +10,9 @@ class NavBar extends Component{
         <nav>
             <Link to ="/">
             <img
-            className="pet-logo"
-            src="https://i.pinimg.com/originals/af/fb/c9/affbc96be98edecba473e0e630069b3b.png"
-            alt="pet logo"/>
+              className="pet-logo"
+              src="https://i.pinimg.com/originals/af/fb/c9/affbc96be98edecba473e0e630069b3b.png"
+              alt="pet logo"/>
             </Link>
             <Link to ="/movies">Movies</Link>
             <Link to ="/people">People</Link>
