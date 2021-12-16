@@ -6,7 +6,7 @@ class NavBar extends Component{
   
   render(){
     return (
-      <div className="NavBar">
+      <div className="nav">
         <nav>
             <Link to ="/">
             <img

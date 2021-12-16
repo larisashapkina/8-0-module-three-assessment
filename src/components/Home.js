@@ -7,7 +7,7 @@ class Home extends Component{
     return (
       <div className="Home">
         <main>
-          <h1>Hello, home!</h1>
+          <h1>Welcome to GhibliApp!</h1>
         </main>
       </div>
     );
